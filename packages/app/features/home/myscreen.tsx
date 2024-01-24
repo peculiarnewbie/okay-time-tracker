@@ -14,6 +14,7 @@ import { ChevronDown, ChevronUp } from '@tamagui/lucide-icons'
 import { useState } from 'react'
 import { useLink } from 'solito/link'
 import * as FileSystem from 'expo-file-system'
+import { TimerItem } from '../TimerItem/TimerItem'
 
 export function HomeScreen() {
 	const [changingText, setChangingText] = useState('not set')
@@ -55,6 +56,8 @@ export function HomeScreen() {
 			<Button onPress={writeToMarkdown} size="$6">
 				Write Markdown
 			</Button>
+
+			<TimerItem></TimerItem>
 
 			<Text>{FileSystem.documentDirectory}</Text>
 		</>
